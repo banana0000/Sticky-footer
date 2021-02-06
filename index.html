@@ -1,62 +1,23 @@
-.container {
-	display: grid;
-	grid-template-areas: 
-  "header header header"
-  "menu main sidebar"
-	"footer footer footer";
-	grid-template-columns: 100px 1fr 100px;
-  grid-template-rows: auto 1fr auto;
-  grid-gap:10px;
-  height: 100vh;
-}
+!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Advanced CSS - Solution 9.2</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap" rel="stylesheet">
+    <link href=".css" rel="stylesheet" type="text/css">
+  </head>
 
-@media (max-width: 768px) {
-	.container {
-		grid-template-areas: 
-    "header"
-		"menu"
-		"main"
-		"sidebar"
-		"footer";
-		grid-template-columns: 100%;
-		grid-template-rows: 100px 50px 1fr 50px 70px;
-	}
-}
+  <body class="container">
+      <h1 class="title">The sticky footer</h1>
 
-.header {
-	background-color:greenyellow;
-	font-size: 2rem;
-	text-align: center;
-}
+      <div class="site-content">
+        <p>Let's see how the sticky footer is working and how can we solve this problem a more elegant way.</p>
+        <p>The sticky footer - surprise, surprise - should stick to the bottom of the page, especially when there is not enough content to fill the whole page.</p>
+        <p>When the contents of the page is bigger than the page itself, the sticky footer will be at the bottom of the whole page.</p>
+        </div> 
 
-.main {
-  background-color: lightblue;
-  text-align: center;
-}
-
-.menu,
-.sidebar {
-	background-color: orange;
-  color: #ffffff;
-}
-
-.footer {
-	background-color:#000000;
-	color: #ffffff;
-	font-size: 2rem;
-  text-align: justify;
-}
-
-.header,
-.main,
-.menu,
-.sidebar,
-.footer {
-	padding: 15px;
-}
-
-.header { grid-area: header; }
-.main { grid-area: main; }
-.menu { grid-area: menu; }
-.sidebar { grid-area: sidebar; }
-.footer { grid-area: footer; }
+    <footer class="footer">Please, I want to be at the bottom of the page where I belong :)</footer>
+  </body>
+</html>
